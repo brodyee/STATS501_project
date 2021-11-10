@@ -9,4 +9,8 @@ Contains all the data files:
 ## `code`
 
 Contains the R and Python code for project:
-- `EDA.ipynb`: Contains code for dataset up and exploration. 
+- `EDA.ipynb`: Contains code for dataset up and exploration.
+
+## `writeUps`
+
+Contain all presentation and report materials 
