@@ -13,4 +13,5 @@ Contains the R and Python code for project:
 
 ## `writeUps`
 
-Contain all presentation and report materials 
+Contain all presentation and report materials:
+- `STATS501_Proposal.pdf`: Proposal for the project. 
