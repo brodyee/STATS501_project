@@ -4,6 +4,14 @@ Car risk – Q8 (riding with a seatbelt),  Q9 (ride in a car with someone who ha
 Violence - Q12 (carry weapon), Q13 (carry weapon in school), Q15 (felt unsafe at school), Q16 (threatened/injured in school), Q17 (in physical fight), Q18 (in physical fight in school)
 ["Q12", "Q13", "Q15", "Q16", "Q17", "Q18"]
 
+question wieght 	ranking
+12	 1 (base)	1, 2, 3, 4, 6
+13	 2		1, 2, 3, 4, 6
+15	 .5		1, 2, 3, 4, 6
+16	 5		1, 2, 3, 4, 5, 6, 7, 9
+17	 3		1, 2, 3, 4, 5, 6, 7, 9
+18	 4		1, 2, 3, 4, 5, 6, 7, 9
+
 Sex – Q19 (forced to have sex), Q58 (had sex), Q59 (age first sex), Q60 (many people sex), Q61 (month many people sex), Q62 (drink/drugs before sex), Q63 (use condom), Q64 (birth control), qtaughtHIV (ever taught HIV)
 ["Q19", "Q58", "Q59", "Q60", "Q61", "Q62", "Q63", "Q64", "qtaughtHIV"]
 
