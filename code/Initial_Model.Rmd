@@ -1,0 +1,40 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library("nlme")
+library("mgcv")
+library("lattice")
+library("tidyverse")
+library("stringr") 
+```
+
+```{r}
+setwd('C:/Users/danie/OneDrive/Documents/stats501/STATS501_project/data')
+econ_dat = read_delim('violenceKNNnew.csv', delim = ",")
+```
+```{r}
+#econ_dat$`Median Household Income in Dollars` = substring(econ_dat$`Median Household Income in Dollars`,2) 
+#econ_dat$`Median Household Income in Dollars` = str_replace_all(econ_dat$`Median Household Income in Dollars`, "[,]", "") 
+#as.double(econ_dat$`Median Household Income in Dollars`)
+
+#setwd('C:/Users/danie/OneDrive/Documents/stats501/STATS501_project/data')
+#write.csv(econ_dat, 'violenceKNN.csv')
+```
+
+```{r}
+## Group by County
+
+# Use all age poverty percent
+mod_1_reml = lme(`violence score` ~ `All Ages in Poverty Percent` + `Median Household Income in Dollars` + `Unemployment Rate` + Population + `SNAP($/Person)`, random= ~ 1|sitename, data = econ_dat)
+
+mod_1_ml = lme(`violence score` ~ `All Ages in Poverty Percent` + `Median Household Income in Dollars` + `Unemployment Rate` + Population + `SNAP($/Person)`, random = ~1|sitename, method = "ML", data = econ_dat)
+
+# Use under 18 poverty percent
+mod_2_reml = lme(`violence score` ~ `Under Age 18 in Poverty Percent` + `Median Household Income in Dollars` + `Unemployment Rate` + Population + `SNAP($/Person)`, random = ~1|sitename, data = econ_dat)
+  
+mod_2_ml = lme(`violence score` ~ `Under Age 18 in Poverty Percent` + `Median Household Income in Dollars` + `Unemployment Rate` + Population + `SNAP($/Person)`, random = ~1|sitename, method = "ML", data = econ_dat)
+```
+
