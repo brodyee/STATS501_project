@@ -1,0 +1,21 @@
+Car risk – Q8 (riding with a seatbelt),  Q9 (ride in a car with someone who has been drinking)
+["Q8", "Q9"]
+
+Violence - Q12 (carry weapon), Q13 (carry weapon in school), Q15 (felt unsafe at school), Q16 (threatened/injured in school), Q17 (in physical fight), Q18 (in physical fight in school)
+["Q12", "Q13", "Q15", "Q16", "Q17", "Q18"]
+
+Sex – Q19 (forced to have sex), Q58 (had sex), Q59 (age first sex), Q60 (many people sex), Q61 (month many people sex), Q62 (drink/drugs before sex), Q63 (use condom), Q64 (birth control), qtaughtHIV (ever taught HIV)
+["Q19", "Q58", "Q59", "Q60", "Q61", "Q62", "Q63", "Q64", "qtaughtHIV"]
+
+Suicide – Q25 (feel sad/hopeless), Q26 (consider suicide), Q27 (plan suicide), Q28 (attempt suicide), Q29 (suicide injury)
+["Q25", "Q26", "Q27", "Q28", "Q29"]
+
+Drug – Q30 (tried cigarettes), Q32 (days smoke cigarettes), Q33 (how may cigarettes), Q38 (smoke cigars), Q40 (age first alcohol), Q41 (days alcohol), Q45 (used marijuana), Q46 (age first marijuana), Q47 (times used marijuana), Q50 (used cocaine), Q51 (got high), Q52 (used heroin), Q53 (used methamphetamines), Q54 (used ecstasy), Q55 (taken steroids), Q56 (needle inject illegal), Q57 (given drug in school), qcigschool (smoke at school), qalcoholschool (drink alcohol at school), qmarijuanaschool (use marijuana at school)
+["Q30", "Q32", "Q33", "Q38", "Q40", "Q41", "Q45", "Q46", "Q47", "Q50", "Q51", "Q52", "Q53", "Q54", "Q55", "Q56", "Q57", "qcigschool", "qalcoholschool", "qmarijuanaschool"]
+
+Self  - Q65 (gender of those who have you had sex with), Q66 (sexual identity), Q67 (describe weight), Q68 (do about weight), Q89 (grades), qnowt (overweight indicator), qnobese (obesity indicator), bmipct (bmi percentile), bmi, sexpart (sex of sexual contact), sexpart2 (collapsed sex of sexual contact), sexed (sexual identity), sexid2 (collapsed sexual identity), stheight (height without shoes), stweight (weight without shoes), race4 (4 levels race/ethnicity), race7 (7 levels race/ethnicity), sex, age, grade
+["Q65", "Q66", "Q67", "Q68", "Q89", "qnowt", "qnobese", "bmipct", "bmi", "sexpart", "sexpart2", "sexed", "sexid2", "stheight", "stweight", "race4", "race7", "sex", "age", "grade"]
+
+Self health - Q69 (drink juice), Q70 (eat fruit), Q71 (eat salad), Q72 (eat potatoes), Q73 (eat carrots), Q74 (eat vegetables), Q76 (drink milk), Q79 (hours TV), Q81 (days PE class), Q82 (sports teams play on), Q87 (asthma)
+["Q69", "Q70", "Q71", "Q72", "Q73", "Q74", "Q76", "Q79", "Q81", "Q82", "Q87"]
+
