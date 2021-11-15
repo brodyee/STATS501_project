@@ -12,9 +12,10 @@ library("stringr")
 library("plot3D")
 ```
 
+#### IMPUTE USING KNN
 ```{r}
 setwd('C:/Users/danie/OneDrive/Documents/stats501/STATS501_project/data')
-econ_dat = read_delim('violenceKNN.csv', delim = ",")
+knn_dat = read_delim('violenceKNN.csv', delim = ",")
 ```
 ```{r}
 #econ_dat$`Median Household Income in Dollars` = substring(econ_dat$`Median Household Income in Dollars`,2) 
@@ -29,54 +30,54 @@ econ_dat = read_delim('violenceKNN.csv', delim = ",")
 ## Group by County
 
 # Use all age poverty percent
-mod_all_reml = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+mod_all_reml_knn = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = knn_dat)
 
-mod_all_ml = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = econ_dat)
+mod_all_ml_knn = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = knn_dat)
 
 # Use under 18 poverty percent
-mod_und_reml = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+mod_und_reml_knn = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = knn_dat)
 
-mod_und_ml = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = econ_dat)
+mod_und_ml_knn = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = knn_dat)
 ```
 
 ```{r}
-summary(mod_all_reml)
-summary(mod_all_ml)
-summary(mod_und_reml)
-summary(mod_und_ml)
+summary(mod_all_reml_knn)
+summary(mod_all_ml_knn)
+summary(mod_und_reml_knn)
+summary(mod_und_ml_knn)
 ```
 
 ```{r}
 # Dropping each predictor
 
-mod_und_reml_pov = lme(violenceScore ~ MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+mod_und_reml_pov_knn = lme(violenceScore ~ MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = knn_dat)
 
-mod_und_reml_med = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+mod_und_reml_med_knn = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = knn_dat)
 
 
-mod_und_reml_unemp = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+mod_und_reml_unemp_knn = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + Population + SNAP, random = ~ 1 | sitename, data = knn_dat)
 
-mod_und_reml_pop = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat)
+mod_und_reml_pop_knn = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = knn_dat)
 
-mod_und_reml_snap = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population, random = ~ 1 | sitename, data = econ_dat)
+mod_und_reml_snap_knn = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population, random = ~ 1 | sitename, data = knn_dat)
 ```
 
 ```{r}
 # Using under 18 poverty rate
-mod_und_reml_2 = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat)
-mod_und_reml_3 = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat)
+mod_und_reml_2b_knn = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = knn_dat)
+mod_und_reml_3_knn = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = knn_dat)
 
 # F test comparing with/without poverty percent
-anova(mod_und_reml_2, mod_und_reml_3, test = "F")
+anova(mod_und_reml_2b_knn, mod_und_reml_3_knn, test = "F")
 ```
 
 ```{r}
 # Using all age poverty percent
-mod_und_ml_2 = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat, method = "ML")
-mod_und_ml_3 = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat, method = "ML")
+mod_und_ml_2b_knn = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = knn_dat, method = "ML")
+mod_und_ml_3_knn = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = knn_dat, method = "ML")
 
 # F test comparing with/without poverty percent
-anova(mod_und_ml_2, mod_und_ml_3, test = "F")
+anova(mod_und_ml_2b_knn, mod_und_ml_3_knn, test = "F")
 ```
 
 ```{r}
@@ -86,6 +87,217 @@ anova(mod_und_ml_2, mod_und_ml_3, test = "F")
 
 
 ```{r}
-scatter3D(econ_dat$UnemploymentRate, econ_dat$SNAP, econ_dat$violenceScore, col.var = as.integer(econ_dat$sitename), col = c(1:15), phi = 0)
+scatter3D(knn_dat$UnemploymentRate, knn_dat$SNAP, knn_dat$violenceScore, col.var = as.integer(knn_dat$sitename), col = c(1:15), phi = 0)
 ```
 
+
+###### IMPUTE USING MEAN
+```{r}
+setwd('C:/Users/danie/OneDrive/Documents/stats501/STATS501_project/data')
+mean_dat = read_delim('violenceMean.csv', delim = ",") %>% transmute(year = year, sitename = sitename, violenceScore = `violence score`, AllAgesInPovertyPercent = `All Ages in Poverty Percent`, UnderAge18InPovertyPercent = `Under Age 18 in Poverty Percent`, MedianHouseholdIncomeInDollars = `Median Household Income in Dollars`, UnemploymentRate = `Unemployment Rate`, Population = Population, SNAP = `SNAP($/Person)`)
+```
+```{r}
+## Group by County
+
+# Use all age poverty percent
+mod_all_reml_mean = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mean_dat)
+
+mod_all_ml_mean = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = mean_dat)
+
+# Use under 18 poverty percent
+mod_und_reml_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mean_dat)
+
+mod_und_ml_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = mean_dat)
+```
+
+```{r}
+summary(mod_all_reml_mean)
+summary(mod_all_ml_mean)
+summary(mod_und_reml_mean)
+summary(mod_und_ml_mean)
+```
+
+```{r}
+# Dropping each predictor
+
+mod_und_reml_pov_mean = lme(violenceScore ~ MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mean_dat)
+
+mod_und_reml_med_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mean_dat)
+
+
+mod_und_reml_unemp_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + Population + SNAP, random = ~ 1 | sitename, data = mean_dat)
+
+mod_und_reml_pop_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mean_dat)
+
+mod_und_reml_snap_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population, random = ~ 1 | sitename, data = mean_dat)
+```
+
+```{r}
+# Using under 18 poverty rate
+mod_und_reml_2_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mean_dat)
+mod_und_reml_2b_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mean_dat)
+mod_und_reml_3_mean = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mean_dat)
+
+# F test comparing with/without poverty percent
+anova(mod_und_reml_2_mean, mod_und_reml_2b_mean, mod_und_reml_3_mean, test = "F")
+```
+
+```{r}
+# Using all age poverty percent
+mod_und_ml_2_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mean_dat, method = "ML")
+mod_und_ml_2b_mean = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mean_dat, method = "ML")
+mod_und_ml_3_mean = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mean_dat, method = "ML")
+
+# F test comparing with/without poverty percent
+anova(mod_und_ml_2_mean, mod_und_ml_2b_mean, mod_und_ml_3_mean, test = "F")
+```
+
+###### IMPUTE USING MEDIAN
+```{r}
+setwd('C:/Users/danie/OneDrive/Documents/stats501/STATS501_project/data')
+med_dat = read_delim('violenceMedian.csv', delim = ",")
+```
+```{r}
+## Group by County
+
+# Use all age poverty percent
+mod_all_reml_med = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = med_dat)
+
+mod_all_ml_med = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = med_dat)
+
+# Use under 18 poverty percent
+mod_und_reml_med = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = med_dat)
+
+mod_und_ml_med = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = med_dat)
+```
+
+```{r}
+summary(mod_all_reml_med)
+summary(mod_all_ml_med)
+summary(mod_und_reml_med)
+summary(mod_und_ml_med)
+```
+
+```{r}
+# Dropping each predictor
+
+mod_und_reml_pov_med = lme(violenceScore ~ MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = med_dat)
+
+mod_und_reml_med_med = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = med_dat)
+
+
+mod_und_reml_unemp_med = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + Population + SNAP, random = ~ 1 | sitename, data = med_dat)
+
+mod_und_reml_pop_med = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = med_dat)
+
+mod_und_reml_snap_med = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population, random = ~ 1 | sitename, data = med_dat)
+```
+
+```{r}
+# Using under 18 poverty rate
+mod_und_reml_2_med = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = med_dat)
+mod_und_reml_2b_med = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = med_dat)
+mod_und_reml_3_med = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = med_dat)
+
+# F test comparing with/without poverty percent
+anova(mod_und_reml_2_med, mod_und_reml_2b_med, mod_und_reml_3_med, test = "F")
+```
+
+```{r}
+# Using all age poverty percent
+mod_und_ml_2_med = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = med_dat, method = "ML")
+mod_und_ml_2b_med = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = med_dat, method = "ML")
+mod_und_ml_3_med = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = med_dat, method = "ML")
+
+# F test comparing with/without poverty percent
+anova(mod_und_ml_2_med, mod_und_ml_2b_med, mod_und_ml_3_med, test = "F")
+```
+
+
+###### IMPUTE USING MODE
+```{r}
+setwd('C:/Users/danie/OneDrive/Documents/stats501/STATS501_project/data')
+mode_dat = read_delim('violenceMedian.csv', delim = ",")
+```
+```{r}
+## Group by County
+
+# Use all age poverty percent
+mod_all_reml_mode = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mode_dat)
+
+mod_all_ml_mode = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = mode_dat)
+
+# Use under 18 poverty percent
+mod_und_reml_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mode_dat)
+
+mod_und_ml_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = mode_dat)
+```
+
+```{r}
+summary(mod_all_reml_mode)
+summary(mod_all_ml_mode)
+summary(mod_und_reml_mode)
+summary(mod_und_ml_mode)
+```
+
+```{r}
+# Dropping each predictor
+
+mod_und_reml_pov_mode = lme(violenceScore ~ MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mode_dat)
+
+mod_und_reml_med_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mode_dat)
+
+
+mod_und_reml_unemp_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + Population + SNAP, random = ~ 1 | sitename, data = mode_dat)
+
+mod_und_reml_pop_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mode_dat)
+
+mod_und_reml_snap_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population, random = ~ 1 | sitename, data = mode_dat)
+```
+
+```{r}
+# Using under 18 poverty rate
+mod_und_reml_2_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mode_dat)
+mod_und_reml_2b_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mode_dat)
+mod_und_reml_3_mode = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mode_dat)
+
+# F test comparing with/without poverty percent
+anova(mod_und_reml_2_mode, mod_und_reml_2b_mode, mod_und_reml_3_mode, test = "F")
+```
+
+```{r}
+# Using all age poverty percent
+mod_und_ml_2_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = mode_dat, method = "ML")
+mod_und_ml_2b_mode = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mode_dat, method = "ML")
+mod_und_ml_3_mode = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = mode_dat, method = "ML")
+
+# F test comparing with/without poverty percent
+anova(mod_und_ml_2_mode, mod_und_ml_2b_mode, mod_und_ml_3_mode, test = "F")
+```
+
+mod_und_reml_2b_knn	1	6	800.6683	817.2924	-394.3342
+mod_und_reml_3_knn	2	5	796.2144	810.1100	-393.1072
+mod_und_ml_2b_knn	1	6	792.6005	809.4246	-390.3002
+mod_und_ml_3_knn	2	5	790.7013	804.7214	-390.3507
+mod_und_reml_2_mean	1	7	828.1009	847.4361	-407.0505
+mod_und_reml_2b_mean	2	6	798.8955	815.5196	-393.4477
+mod_und_reml_3_mean	3	5	794.4427	808.3383	-392.2214
+mod_und_ml_2_mean	1	7	792.0958	811.7239	-389.0479
+mod_und_ml_2b_mean	2	6	790.7296	807.5538	-389.3648
+mod_und_ml_3_mean	3	5	788.8769	802.8970	-389.4385
+mod_und_reml_2_med	1	7	823.1373	842.4726	-404.5687
+mod_und_reml_2b_med	2	6	793.9494	810.5735	-390.9747
+mod_und_reml_3_med	3	5	789.4395	803.3352	-389.7198
+mod_und_ml_2_med	1	7	786.9386	806.5667	-386.4693
+mod_und_ml_2b_med	2	6	785.6310	802.4551	-386.8155
+mod_und_ml_3_med	3	5	783.7481	797.7682	-386.8740
+mod_und_reml_2_mode	1	7	823.1373	842.4726	-404.5687
+mod_und_reml_2b_mode	2	6	793.9494	810.5735	-390.9747
+mod_und_reml_3_mode	3	5	789.4395	803.3352	-389.7198
+mod_und_ml_2_mode	1	7	786.9386	806.5667	-386.4693
+mod_und_ml_2b_mode	2	6	785.6310	802.4551	-386.8155
+mod_und_ml_3_mode	3	5	783.7481	797.7682	-386.8740
+
+****** 
+Warning in anova.lme(mod_und_reml_2_mode, mod_und_reml_2b_mode, mod_und_reml_3_mode,  :
+  fitted objects with different fixed effects. REML comparisons are not meaningful.
