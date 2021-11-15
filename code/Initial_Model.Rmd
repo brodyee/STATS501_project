@@ -9,11 +9,12 @@ library("mgcv")
 library("lattice")
 library("tidyverse")
 library("stringr") 
+library("plot3D")
 ```
 
 ```{r}
 setwd('C:/Users/danie/OneDrive/Documents/stats501/STATS501_project/data')
-econ_dat = read_delim('violenceKNNnew.csv', delim = ",")
+econ_dat = read_delim('violenceKNN.csv', delim = ",")
 ```
 ```{r}
 #econ_dat$`Median Household Income in Dollars` = substring(econ_dat$`Median Household Income in Dollars`,2) 
@@ -28,13 +29,63 @@ econ_dat = read_delim('violenceKNNnew.csv', delim = ",")
 ## Group by County
 
 # Use all age poverty percent
-mod_1_reml = lme(`violence score` ~ `All Ages in Poverty Percent` + `Median Household Income in Dollars` + `Unemployment Rate` + Population + `SNAP($/Person)`, random= ~ 1|sitename, data = econ_dat)
+mod_all_reml = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
 
-mod_1_ml = lme(`violence score` ~ `All Ages in Poverty Percent` + `Median Household Income in Dollars` + `Unemployment Rate` + Population + `SNAP($/Person)`, random = ~1|sitename, method = "ML", data = econ_dat)
+mod_all_ml = lme(violenceScore ~ AllAgesInPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = econ_dat)
 
 # Use under 18 poverty percent
-mod_2_reml = lme(`violence score` ~ `Under Age 18 in Poverty Percent` + `Median Household Income in Dollars` + `Unemployment Rate` + Population + `SNAP($/Person)`, random = ~1|sitename, data = econ_dat)
-  
-mod_2_ml = lme(`violence score` ~ `Under Age 18 in Poverty Percent` + `Median Household Income in Dollars` + `Unemployment Rate` + Population + `SNAP($/Person)`, random = ~1|sitename, method = "ML", data = econ_dat)
+mod_und_reml = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+
+mod_und_ml = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, method = "ML", data = econ_dat)
+```
+
+```{r}
+summary(mod_all_reml)
+summary(mod_all_ml)
+summary(mod_und_reml)
+summary(mod_und_ml)
+```
+
+```{r}
+# Dropping each predictor
+
+mod_und_reml_pov = lme(violenceScore ~ MedianHouseholdIncomeInDollars + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+
+mod_und_reml_med = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+
+
+mod_und_reml_unemp = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + Population + SNAP, random = ~ 1 | sitename, data = econ_dat)
+
+mod_und_reml_pop = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat)
+
+mod_und_reml_snap = lme(violenceScore ~ UnderAge18InPovertyPercent + MedianHouseholdIncomeInDollars + UnemploymentRate + Population, random = ~ 1 | sitename, data = econ_dat)
+```
+
+```{r}
+# Using under 18 poverty rate
+mod_und_reml_2 = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat)
+mod_und_reml_3 = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat)
+
+# F test comparing with/without poverty percent
+anova(mod_und_reml_2, mod_und_reml_3, test = "F")
+```
+
+```{r}
+# Using all age poverty percent
+mod_und_ml_2 = lme(violenceScore ~ UnderAge18InPovertyPercent + UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat, method = "ML")
+mod_und_ml_3 = lme(violenceScore ~ UnemploymentRate + SNAP, random = ~ 1 | sitename, data = econ_dat, method = "ML")
+
+# F test comparing with/without poverty percent
+anova(mod_und_ml_2, mod_und_ml_3, test = "F")
+```
+
+```{r}
+# Find how to compare between reml and ml
+```
+
+
+
+```{r}
+scatter3D(econ_dat$UnemploymentRate, econ_dat$SNAP, econ_dat$violenceScore, col.var = as.integer(econ_dat$sitename), col = c(1:15), phi = 0)
 ```
 
