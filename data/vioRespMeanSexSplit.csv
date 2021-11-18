@@ -1,0 +1,263 @@
+year,sitename,sex,violence score
+2003,"Borough of Bronx, NY (NYG)",Female,36.23370578524969
+2003,"Borough of Bronx, NY (NYG)",Male,65.04156179161069
+2003,"Borough of Brooklyn, NY (NYH)",Female,26.60371068010246
+2003,"Borough of Brooklyn, NY (NYH)",Male,69.02849882425983
+2003,"Borough of Manhattan, NY (NYI)",Female,26.29505964448126
+2003,"Borough of Manhattan, NY (NYI)",Male,57.48104953274578
+2003,"Borough of Queens, NY (NYJ)",Female,28.401844064069063
+2003,"Borough of Queens, NY (NYJ)",Male,65.46483797761066
+2003,"Borough of Staten Island, NY (NYK)",Female,31.17545925172252
+2003,"Borough of Staten Island, NY (NYK)",Male,70.26698423940047
+2003,"Broward County, FL (FT)",Female,25.744168254644833
+2003,"Broward County, FL (FT)",Male,55.92427798630777
+2003,"Chicago, IL (CH)",Female,42.51469888793956
+2003,"Chicago, IL (CH)",Male,72.29351903285868
+2003,"Los Angeles, CA (LO)",Female,29.59153096241813
+2003,"Los Angeles, CA (LO)",Male,69.84511728796753
+2003,"Miami-Dade County, FL (MM)",Female,25.41420964793992
+2003,"Miami-Dade County, FL (MM)",Male,57.096056901877915
+2003,"New York City, NY (NYC)",Female,29.552752634676366
+2003,"New York City, NY (NYC)",Male,65.51477055639063
+2003,"Orange County, FL (OL)",Female,19.823921029657374
+2003,"Orange County, FL (OL)",Male,47.43763944582949
+2003,"Palm Beach County, FL (PB)",Female,24.97011105505919
+2003,"Palm Beach County, FL (PB)",Male,76.92979749798185
+2003,"Philadelphia, PA (PH)",Female,29.738383942813336
+2003,"Philadelphia, PA (PH)",Male,64.11987916456394
+2003,"San Diego, CA (SA)",Female,25.135719252317344
+2003,"San Diego, CA (SA)",Male,60.0278362223932
+2005,"Borough of Bronx, NY (NYG)",Female,30.458105105085547
+2005,"Borough of Bronx, NY (NYG)",Male,61.03419471713596
+2005,"Borough of Brooklyn, NY (NYH)",Female,39.91483339405446
+2005,"Borough of Brooklyn, NY (NYH)",Male,63.2892496546383
+2005,"Borough of Manhattan, NY (NYI)",Female,31.182865490065662
+2005,"Borough of Manhattan, NY (NYI)",Male,59.75537411765902
+2005,"Borough of Queens, NY (NYJ)",Female,28.23972552720428
+2005,"Borough of Queens, NY (NYJ)",Male,64.0339822476508
+2005,"Borough of Staten Island, NY (NYK)",Female,21.549175758088293
+2005,"Borough of Staten Island, NY (NYK)",Male,66.48542629715824
+2005,"Broward County, FL (FT)",Female,27.02932498407614
+2005,"Broward County, FL (FT)",Male,61.65445471163922
+2005,"Chicago, IL (CH)",Female,39.19144881824294
+2005,"Chicago, IL (CH)",Male,69.04889582271977
+2005,"Los Angeles, CA (LO)",Female,30.685109819243493
+2005,"Los Angeles, CA (LO)",Male,63.05045223484661
+2005,"Miami-Dade County, FL (MM)",Female,25.101082195080508
+2005,"Miami-Dade County, FL (MM)",Male,52.62415761218576
+2005,"New York City, NY (NYC)",Female,30.861048810762234
+2005,"New York City, NY (NYC)",Male,62.49613392304384
+2005,"Orange County, FL (OL)",Female,28.01693082688986
+2005,"Orange County, FL (OL)",Male,64.73741625371966
+2005,"Palm Beach County, FL (PB)",Female,31.423315728091325
+2005,"Palm Beach County, FL (PB)",Male,62.94116292241539
+2005,"San Diego, CA (SA)",Female,32.34507636103035
+2005,"San Diego, CA (SA)",Male,63.13429021428317
+2005,"San Francisco, CA (SF)",Female,28.145330477437568
+2005,"San Francisco, CA (SF)",Male,51.91632970441004
+2007,"Borough of Bronx, NY (NYG)",Female,36.14566443117993
+2007,"Borough of Bronx, NY (NYG)",Male,56.38293069731104
+2007,"Borough of Brooklyn, NY (NYH)",Female,30.997823101294735
+2007,"Borough of Brooklyn, NY (NYH)",Male,57.165984739884784
+2007,"Borough of Manhattan, NY (NYI)",Female,24.749293891689767
+2007,"Borough of Manhattan, NY (NYI)",Male,46.87494366212275
+2007,"Borough of Queens, NY (NYJ)",Female,20.147257919029514
+2007,"Borough of Queens, NY (NYJ)",Male,56.75056464266173
+2007,"Borough of Staten Island, NY (NYK)",Female,20.006478212846908
+2007,"Borough of Staten Island, NY (NYK)",Male,50.660971440461225
+2007,"Broward County, FL (FT)",Female,24.260415135629295
+2007,"Broward County, FL (FT)",Male,56.63839060057713
+2007,"Chicago, IL (CH)",Female,41.96476394360667
+2007,"Chicago, IL (CH)",Male,62.03238756785299
+2007,"Los Angeles, CA (LO)",Female,28.456481426170974
+2007,"Los Angeles, CA (LO)",Male,65.68885359477028
+2007,"Miami-Dade County, FL (MM)",Female,30.3284287908809
+2007,"Miami-Dade County, FL (MM)",Male,60.029311540643576
+2007,"New York City, NY (NYC)",Female,26.659975321213462
+2007,"New York City, NY (NYC)",Male,54.00283530698009
+2007,"Orange County, FL (OL)",Female,31.360969197148307
+2007,"Orange County, FL (OL)",Male,60.37404196740389
+2007,"Palm Beach County, FL (PB)",Female,27.33012500766212
+2007,"Palm Beach County, FL (PB)",Male,63.92729329606554
+2007,"Philadelphia, PA (PH)",Female,39.17603567440541
+2007,"Philadelphia, PA (PH)",Male,71.76525446439798
+2007,"San Diego, CA (SA)",Female,23.888811185790093
+2007,"San Diego, CA (SA)",Male,63.08899345895856
+2007,"San Francisco, CA (SF)",Female,20.678165202717267
+2007,"San Francisco, CA (SF)",Male,43.348735758119396
+2009,"Borough of Bronx, NY (NYG)",Female,34.20974251663108
+2009,"Borough of Bronx, NY (NYG)",Male,56.70051841570487
+2009,"Borough of Brooklyn, NY (NYH)",Female,37.9634286457341
+2009,"Borough of Brooklyn, NY (NYH)",Male,58.92341137499432
+2009,"Borough of Manhattan, NY (NYI)",Female,31.271140862511086
+2009,"Borough of Manhattan, NY (NYI)",Male,61.272289040901654
+2009,"Borough of Queens, NY (NYJ)",Female,25.19376718789865
+2009,"Borough of Queens, NY (NYJ)",Male,50.834237968066184
+2009,"Borough of Staten Island, NY (NYK)",Female,22.37233986138359
+2009,"Borough of Staten Island, NY (NYK)",Male,66.56032765964342
+2009,"Broward County, FL (FT)",Female,35.02332431802549
+2009,"Broward County, FL (FT)",Male,67.50196242283323
+2009,"Chicago, IL (CH)",Female,40.376168856159715
+2009,"Chicago, IL (CH)",Male,71.1146068853758
+2009,"Los Angeles, CA (LO)",Female,26.044339826515074
+2009,"Los Angeles, CA (LO)",Male,57.879934537454375
+2009,"Miami-Dade County, FL (MM)",Female,31.680359294174238
+2009,"Miami-Dade County, FL (MM)",Male,61.758209539568234
+2009,"New York City, NY (NYC)",Female,30.954414516307157
+2009,"New York City, NY (NYC)",Male,58.18727908801441
+2009,"Orange County, FL (OL)",Female,28.15705063390399
+2009,"Orange County, FL (OL)",Male,61.566634097291896
+2009,"Palm Beach County, FL (PB)",Female,27.103892721640438
+2009,"Palm Beach County, FL (PB)",Male,68.96779028118043
+2009,"Philadelphia, PA (PH)",Female,38.732749412893604
+2009,"Philadelphia, PA (PH)",Male,65.51329272870923
+2009,"San Diego, CA (SA)",Female,24.934792926683443
+2009,"San Diego, CA (SA)",Male,51.065764562990736
+2009,"San Francisco, CA (SF)",Female,20.245774513042132
+2009,"San Francisco, CA (SF)",Male,45.032741149103735
+2011,"Borough of Bronx, NY (NYG)",Female,29.517043600730478
+2011,"Borough of Bronx, NY (NYG)",Male,52.09982605547177
+2011,"Borough of Brooklyn, NY (NYH)",Female,37.071376807712774
+2011,"Borough of Brooklyn, NY (NYH)",Male,57.297189712065816
+2011,"Borough of Manhattan, NY (NYI)",Female,26.81806956769351
+2011,"Borough of Manhattan, NY (NYI)",Male,49.718442398519315
+2011,"Borough of Queens, NY (NYJ)",Female,15.689476367307705
+2011,"Borough of Queens, NY (NYJ)",Male,46.45789196028801
+2011,"Borough of Staten Island, NY (NYK)",Female,24.485324553433323
+2011,"Borough of Staten Island, NY (NYK)",Male,48.75126674488812
+2011,"Broward County, FL (FT)",Female,24.540812055955268
+2011,"Broward County, FL (FT)",Male,55.88981827281043
+2011,"Chicago, IL (CH)",Female,40.384011068070684
+2011,"Chicago, IL (CH)",Male,62.83124644332666
+2011,"Los Angeles, CA (LO)",Female,19.884293170790254
+2011,"Los Angeles, CA (LO)",Male,53.9870161299708
+2011,"Miami-Dade County, FL (MM)",Female,30.95494813911921
+2011,"Miami-Dade County, FL (MM)",Male,58.68564117312138
+2011,"New York City, NY (NYC)",Female,27.344876253725467
+2011,"New York City, NY (NYC)",Male,51.64889071067388
+2011,"Orange County, FL (OL)",Female,30.85648859827019
+2011,"Orange County, FL (OL)",Male,55.29038682628482
+2011,"Palm Beach County, FL (PB)",Female,29.621831751151884
+2011,"Palm Beach County, FL (PB)",Male,57.821630347434755
+2011,"Philadelphia, PA (PH)",Female,38.77356411631416
+2011,"Philadelphia, PA (PH)",Male,63.53042164211832
+2011,"San Diego, CA (SA)",Female,26.594306517508734
+2011,"San Diego, CA (SA)",Male,51.96078877601107
+2011,"San Francisco, CA (SF)",Female,17.21071144689705
+2011,"San Francisco, CA (SF)",Male,39.6428399377816
+2013,"Borough of Bronx, NY (NYG)",Female,32.775339817722546
+2013,"Borough of Bronx, NY (NYG)",Male,56.81385534431556
+2013,"Borough of Brooklyn, NY (NYH)",Female,27.825474685784265
+2013,"Borough of Brooklyn, NY (NYH)",Male,47.590046191742246
+2013,"Borough of Manhattan, NY (NYI)",Female,22.709858133781808
+2013,"Borough of Manhattan, NY (NYI)",Male,46.037261674005755
+2013,"Borough of Queens, NY (NYJ)",Female,26.091613243928656
+2013,"Borough of Queens, NY (NYJ)",Male,45.73925830347962
+2013,"Borough of Staten Island, NY (NYK)",Female,23.192719414481537
+2013,"Borough of Staten Island, NY (NYK)",Male,48.519809140401804
+2013,"Broward County, FL (FT)",Female,17.62045261027147
+2013,"Broward County, FL (FT)",Male,28.297894902354383
+2013,"Chicago, IL (CH)",Female,23.1689591604533
+2013,"Chicago, IL (CH)",Male,45.54083671349321
+2013,"Los Angeles, CA (LO)",Female,19.45069882082549
+2013,"Los Angeles, CA (LO)",Male,32.48881745048183
+2013,"Miami-Dade County, FL (MM)",Female,25.036472894450714
+2013,"Miami-Dade County, FL (MM)",Male,41.720314565364674
+2013,"New York City, NY (NYC)",Female,26.26292233688301
+2013,"New York City, NY (NYC)",Male,48.82486792002457
+2013,"Orange County, FL (OL)",Female,19.887779483069348
+2013,"Orange County, FL (OL)",Male,38.31563284717443
+2013,"Palm Beach County, FL (PB)",Female,24.28753779582763
+2013,"Palm Beach County, FL (PB)",Male,51.29972072957807
+2013,"Philadelphia, PA (PH)",Female,31.512674640244118
+2013,"Philadelphia, PA (PH)",Male,50.444074787245555
+2013,"San Diego, CA (SA)",Female,12.46331407523522
+2013,"San Diego, CA (SA)",Male,38.21872375706655
+2013,"San Francisco, CA (SF)",Female,18.222022715053935
+2013,"San Francisco, CA (SF)",Male,35.28645354684779
+2015,"Borough of Bronx, NY (NYG)",Female,19.37652516703686
+2015,"Borough of Bronx, NY (NYG)",Male,42.859878312277445
+2015,"Borough of Brooklyn, NY (NYH)",Female,24.144288147874885
+2015,"Borough of Brooklyn, NY (NYH)",Male,39.38564410603966
+2015,"Borough of Manhattan, NY (NYI)",Female,22.29422834421524
+2015,"Borough of Manhattan, NY (NYI)",Male,46.036781115319116
+2015,"Borough of Queens, NY (NYJ)",Female,22.324706893175946
+2015,"Borough of Queens, NY (NYJ)",Male,37.526136273533716
+2015,"Borough of Staten Island, NY (NYK)",Female,25.75587035532881
+2015,"Borough of Staten Island, NY (NYK)",Male,39.483974633630496
+2015,"Broward County, FL (FT)",Female,20.376520705705737
+2015,"Broward County, FL (FT)",Male,37.39917271753648
+2015,"Los Angeles, CA (LO)",Female,18.029800262743848
+2015,"Los Angeles, CA (LO)",Male,32.13720044345459
+2015,"Miami-Dade County, FL (MM)",Female,19.675364342881952
+2015,"Miami-Dade County, FL (MM)",Male,45.758857294470786
+2015,"New York City, NY (NYC)",Female,22.721527280195783
+2015,"New York City, NY (NYC)",Male,40.83146793192573
+2015,"Orange County, FL (OL)",Female,17.35402265034576
+2015,"Orange County, FL (OL)",Male,47.743971767062995
+2015,"Palm Beach County, FL (PB)",Female,18.473895924811895
+2015,"Palm Beach County, FL (PB)",Male,46.31309004205866
+2015,"Philadelphia, PA (PH)",Female,31.557550583121873
+2015,"Philadelphia, PA (PH)",Male,54.8869516339049
+2015,"San Diego, CA (SA)",Female,13.105779297701723
+2015,"San Diego, CA (SA)",Male,40.46427686363627
+2015,"San Francisco, CA (SF)",Female,16.520415501217563
+2015,"San Francisco, CA (SF)",Male,31.30141478592969
+2017,"Borough of Bronx, NY (NYG)",Female,31.515387819344397
+2017,"Borough of Bronx, NY (NYG)",Male,50.828194810569
+2017,"Borough of Brooklyn, NY (NYH)",Female,25.204222182747493
+2017,"Borough of Brooklyn, NY (NYH)",Male,54.33958406815848
+2017,"Borough of Manhattan, NY (NYI)",Female,19.468095153486296
+2017,"Borough of Manhattan, NY (NYI)",Male,46.004099851574615
+2017,"Borough of Queens, NY (NYJ)",Female,20.04253657707024
+2017,"Borough of Queens, NY (NYJ)",Male,49.49700360963264
+2017,"Borough of Staten Island, NY (NYK)",Female,16.327671891303176
+2017,"Borough of Staten Island, NY (NYK)",Male,49.39986267991628
+2017,"Broward County, FL (FT)",Female,15.000349023357908
+2017,"Broward County, FL (FT)",Male,34.555636109092774
+2017,"Chicago, IL (CH)",Female,24.057540124820985
+2017,"Chicago, IL (CH)",Male,37.99808364269299
+2017,"Los Angeles, CA (LO)",Female,15.952751936391087
+2017,"Los Angeles, CA (LO)",Male,31.607722223220517
+2017,"Miami-Dade County, FL (MM)",Female,17.267086515024573
+2017,"Miami-Dade County, FL (MM)",Male,37.258547832965114
+2017,"New York City, NY (NYC)",Female,23.000746310116277
+2017,"New York City, NY (NYC)",Male,50.4481405663022
+2017,"Orange County, FL (OL)",Female,23.020208420928487
+2017,"Orange County, FL (OL)",Male,39.35795666651272
+2017,"Palm Beach County, FL (PB)",Female,20.35136061103474
+2017,"Palm Beach County, FL (PB)",Male,39.52902415239599
+2017,"Philadelphia, PA (PH)",Female,26.232099706851233
+2017,"Philadelphia, PA (PH)",Male,39.433197565074366
+2017,"San Diego, CA (SA)",Female,11.03981549696902
+2017,"San Diego, CA (SA)",Male,26.750587219042917
+2017,"San Francisco, CA (SF)",Female,16.048485879045796
+2017,"San Francisco, CA (SF)",Male,31.458192789372006
+2019,"Borough of Bronx, NY (NYG)",Female,30.50674751437612
+2019,"Borough of Bronx, NY (NYG)",Male,49.5019141809592
+2019,"Borough of Brooklyn, NY (NYH)",Female,26.15298518035271
+2019,"Borough of Brooklyn, NY (NYH)",Male,45.50108727311396
+2019,"Borough of Manhattan, NY (NYI)",Female,17.569965759285818
+2019,"Borough of Manhattan, NY (NYI)",Male,47.89580696153421
+2019,"Borough of Queens, NY (NYJ)",Female,22.449020782262462
+2019,"Borough of Queens, NY (NYJ)",Male,43.21884737988366
+2019,"Borough of Staten Island, NY (NYK)",Female,32.924536175663235
+2019,"Borough of Staten Island, NY (NYK)",Male,57.492979197741114
+2019,"Broward County, FL (FT)",Female,20.80879131729592
+2019,"Broward County, FL (FT)",Male,28.23274792797469
+2019,"Chicago, IL (CH)",Female,19.57372228213023
+2019,"Chicago, IL (CH)",Male,35.5445115611733
+2019,"Los Angeles, CA (LO)",Female,20.505786807983522
+2019,"Los Angeles, CA (LO)",Male,38.52918397315198
+2019,"New York City, NY (NYC)",Female,25.678818170134406
+2019,"New York City, NY (NYC)",Male,48.3607304659994
+2019,"Orange County, FL (OL)",Female,19.423575469095148
+2019,"Orange County, FL (OL)",Male,33.402727325757915
+2019,"Palm Beach County, FL (PB)",Female,18.679451236016995
+2019,"Palm Beach County, FL (PB)",Male,43.03388188343018
+2019,"Philadelphia, PA (PH)",Female,23.094150330065617
+2019,"Philadelphia, PA (PH)",Male,42.809628625651854
+2019,"San Diego, CA (SA)",Female,10.626748794673361
+2019,"San Diego, CA (SA)",Male,22.362299066776444
+2019,"San Francisco, CA (SF)",Female,21.05364736666878
+2019,"San Francisco, CA (SF)",Male,30.201057926361337
