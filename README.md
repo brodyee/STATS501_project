@@ -10,8 +10,8 @@ Contains all the data files:
 
 Contains the R and Python code for project:
 - `EDA.ipynb`: Contains code for dataset up and exploration.
-- `UnsplitModel.ipynb`: Contains code for the model not split by sex.
-- `SplineModel.ipynb`: Contains code for the spline model.
+- `UnsplitModel.ipynb`, `UnsplitModel.r`: Contains code for the model not split by sex.
+- `SplineModel.ipynb`, `SplineModel.r`: Contains code for the spline model.
 
 ## `writeUps`
 
