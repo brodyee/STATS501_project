@@ -3,7 +3,7 @@
 ## `data`
 
 Contains all the data files:
-- (`Economic_Data.csv`)[https://github.com/brodyee/STATS501_project/blob/main/data/Economic_Data.csv]: Contains the economic data for the counties. Ranging from proverty rate to welfare money per capita.
+- [`Economic_Data.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/Economic_Data.csv): Contains the economic data for the counties. Ranging from proverty rate to welfare money per capita.
 - `SADCQ.csv`: Contains the youth survey answers, race, gender, county, ect. of the survey takers. 
 
 ## `code`
