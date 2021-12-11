@@ -8,11 +8,12 @@ Contains all the data files:
 - [`Economic_Data.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/Economic_Data.csv): Contains the economic data for the counties. Ranging from proverty rate to welfare money per capita.
 - [`SADCQ.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/SADCQ.csv): Contains the youth survey answers, race, gender, county, ect. of the survey takers. 
 - [`question_breakdown.txt`](https://github.com/brodyee/STATS501_project/blob/main/data/question_breakdown.csv): Categories for the questions in `SADCQ.csv`.
-- [`knnImputeVio.csv`](), [`meanImputeVio.csv`](), [`medianImputeVio.csv`](), [`modeImputeVio.csv`](): Imputed questions based on county and year. 4 different methods of imputing.
-- [`knnImputeVio_WSex.csv`](): Same as above with the Sex column.
-- [`params.csv`](), [`predictVars.csv`](), [`sampleVars.csv`](): Bootstrap output for the split on sex model without higher order terms.
-- [`violenceKNN.csv`](), [`violenceMean.csv`](), [`violenceMedian.csv`](), [`violenceMode.csv`]():
-- [`vioRespKNNSexSplit.csv`](), [`vioRespMeanSexSplit.csv`](), [`vioRespMedSexSplit.csv`](), [`vioRespModeSexSplit.csv`]():
+- [`knnImputeVio.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/knnImputeVio.csv), [`meanImputeVio.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/meanImputeVio.csv), [`medianImputeVio.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/medianImputeVio.csv), [`modeImputeVio.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/modeImputeVio.csv): Imputed questions based on county and year. 4 different methods of imputing.
+- [`knnImputeVio_WSex.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/knnImputeVio_WSex.csv): Same as above with the Sex column.
+- [`params.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/params.csv), [`predictVars.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/predictVars.csv), [`sampleVars.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/sampleVars.csv): Bootstrap output for the split on sex model without higher order terms.
+- [`violenceKNN.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/violenceKNN.csv), [`violenceMean.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/violenceMean.csv), [`violenceMedian.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/violenceMedian.csv), [`violenceMode.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/violenceMode.csv): Datasets based off impute.
+- [`vioRespKNNSexSplit.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/vioRespKNNSexSplit.csv), [`vioRespMeanSexSplit.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/vioRespMeanSexSplit.csv), [`vioRespMedSexSplit.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/vioRespMedSexSplit.csv), [`vioRespModeSexSplit.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/vioRespModeSexSplit.csv): Violence Score response based off impute.
+- [`violenceKNNResp_wSex_NotSplitImp.csv`](https://github.com/brodyee/STATS501_project/blob/main/data/violenceKNNResp_wSex_NotSplitImp.csv): Final data response used. 
 
 ## `code`
 
