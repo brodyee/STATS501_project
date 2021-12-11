@@ -9,7 +9,7 @@ Contains all the data files:
 ## `code`
 
 Contains the R and Python code for project:
-- [`EDA.ipynb`](https://github.com/brodyee/STATS501_project/blob/main/code/EDA.ipynb): Contains code for dataset up and exploration.
+- [`DataCleaning&EDA.ipynb`](https://github.com/brodyee/STATS501_project/blob/main/code/DataCleaning&EDA.ipynb): Contains code for dataset up and exploration.
 - [`UnsplitModel.ipynb`](https://github.com/brodyee/STATS501_project/blob/main/code/UnsplitModel.ipynb), [`UnsplitModel.r`](https://github.com/brodyee/STATS501_project/blob/main/code/UnsplitModel.r): Contains code for the model not split by sex.
 - [`SplineModel.ipynb`](https://github.com/brodyee/STATS501_project/blob/main/code/SplineModel.ipynb), [`SplineModel.r`](https://github.com/brodyee/STATS501_project/blob/main/code/SplineModel.r): Contains code for the spline model.
 
